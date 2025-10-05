@@ -1,17 +1,31 @@
+import br.com.alura.screenmatch.model.Filme;
+import br.com.alura.screenmatch.model.Serie;
+
 public class Principal {
     public static void main(String[] args) {
-        Filme filme = new Filme();
-        filme.nomeDoFilme = "A Procura da Felicidade";
-        filme.anoDeLancamento = 2007;
-        filme.duracaoEmMinutos = 117;
 
-        filme.exibeFichaTecnica();
+        Filme aProcuraDaFelicidade = new Filme();
 
-        filme.setAvaliacao(8);
-        filme.setAvaliacao(6.5);
-        filme.setAvaliacao(7.5);
-        System.out.println("Nota: " + filme.somasDasAvaliacoes);
-        System.out.println("Avaliacoes: " + filme.totalDeAvaliacoes);
-        System.out.println("Nota Media: " + filme.getMediaDasAvaliacoes());
+        aProcuraDaFelicidade.setNome("A Procura da Felicidade");
+        aProcuraDaFelicidade.setAno(2006);
+        aProcuraDaFelicidade.setDuracao(117);
+        aProcuraDaFelicidade.setAvaliacao(8);
+        aProcuraDaFelicidade.setCatalogo(false);
+        aProcuraDaFelicidade.setAluguel(true);
+
+        aProcuraDaFelicidade.exibeFichaTecnica();
+        aProcuraDaFelicidade.getAluguel();
+
+        Serie oMentalista = new Serie();
+
+        oMentalista.setNome("O Mentalista");
+        oMentalista.setAno(2008);
+        oMentalista.setTemporadas(7);
+        oMentalista.setEpisodios(151);
+        oMentalista.setDuracao(40);
+        oMentalista.setAvaliacao(7.3);
+        oMentalista.setCatalogo(true);
+
+        oMentalista.exibeFichaTecnica();
     }
 }
